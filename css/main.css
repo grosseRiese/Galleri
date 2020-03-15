@@ -1,0 +1,67 @@
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sunshiney&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+main.gallery {
+    padding: 2rem;
+  }
+   h2, h3, h4, h5, h6 {
+    font-family: 'Audiowide', cursive;
+}
+  .gallery > h1 {
+    font-size: 3rem;
+    font-family: 'Indie Flower','Sunshiney',cursive;
+    margin-bottom: 1rem;
+    color: #333333;
+    font-weight: 100;
+    text-align: center;
+  }
+  
+  .gallery > .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-rows: repeat(6, 200px);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    list-style: none;
+  }
+  
+  .gallery > .gallery__list > li:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .gallery > .gallery__list > li:nth-child(8n) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+  
+  .gallery > .gallery__list > li > figure {
+    height: 100%;
+    position: relative;
+  }
+  
+  .gallery > .gallery__list > li > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery > .gallery__list > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    text-align: center;
+  }
+  .gallery > .gallery__list >li > figure > figcaption > h3 {
+  color: white;
+  padding: .25rem;
+  font-size: .85rem;
+  letter-spacing: .15rem;
+
+}
