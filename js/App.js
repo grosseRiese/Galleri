@@ -20,8 +20,8 @@ function loopData(results){
 
 }
 
-function getImages() {
-    fetch(url, 
+async function getImages() {
+    await fetch(url, 
         {method: 'GET'}
         ).then(response => {
         return response.json();
@@ -33,4 +33,5 @@ function getImages() {
         console.error('ERROR IN FETCH: ', error);
     })
 }
-setTimeout(()=>{ getImages(); },2000);
+
+getImages(); 
